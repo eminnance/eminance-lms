@@ -42,30 +42,30 @@ build/
 /frontend/bazel-out
 
 # Node
-/frontend/node_modules
-/frontend/npm-debug.log
-/frontend/yarn-error.log
+frontend/node_modules
+frontend/npm-debug.log
+frontend/yarn-error.log
 
 # IDEs and editors
-/frontend/.idea/
-/frontend/.project
-/frontend/.classpath
-/frontend/.c9/
-/frontend/*.launch
-/frontend/.settings/
-/frontend/*.sublime-workspace
+frontend/.idea/
+frontend/.project
+frontend/.classpath
+frontend/.c9/
+frontend/*.launch
+frontend/.settings/
+frontend/*.sublime-workspace
 
 # Visual Studio Code
-/frontend/.vscode/*
-/frontend/!.vscode/settings.json
-/frontend/!.vscode/tasks.json
-/frontend/!.vscode/launch.json
-/frontend/!.vscode/extensions.json
-/frontend/.history/*
+frontend/.vscode/*
+frontend/!.vscode/settings.json
+frontend/!.vscode/tasks.json
+frontend/!.vscode/launch.json
+frontend/!.vscode/extensions.json
+frontend/.history/*
 
 # Miscellaneous
-/frontend//.angular/cache
-/frontend/.sass-cache/
+frontend//.angular/cache
+frontend/.sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
@@ -73,5 +73,5 @@ build/
 /frontend/typings
 
 # System files
-/frontend/.DS_Store
-/frontend/Thumbs.db
+frontend/.DS_Store
+frontend/Thumbs.db
