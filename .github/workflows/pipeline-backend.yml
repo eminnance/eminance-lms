@@ -133,11 +133,11 @@ jobs:
           build-args: |
             PROFILE=prod
             APP_VERSION=${{ steps.extract_version.outputs.VERSION }}
-          uses: 8398a7/action-slack@v3
-          with:
-            status: ${{ job.status }}
-            fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
-            text: ':tada: :arrow_right: Job done! New Version is available! :arrow_right: Check Docker.io '
-          env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  
+      - uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+          text: ':tada: :arrow_right: Job done! New Version is available! :arrow_right: Check Docker.io '
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
