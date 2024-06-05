@@ -60,6 +60,7 @@ services:
     ports:
       - 8082:80
 # Networks to be created to facilitate communication between containers
+# trigger workflow
 networks:
   backend:
   frontend:  
