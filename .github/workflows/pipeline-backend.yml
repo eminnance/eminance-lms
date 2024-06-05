@@ -67,12 +67,11 @@ jobs:
       - name: Compile project
         run: |
           cd backend
-          ./mvnw clean compile
-           echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
-
+          ./mvnw clean compile 
+          
   build-image:
     name: Build Docker image
-    runs-on: ubuntu-latest
+    runs-on: linux/amd64
     needs: [build]
     steps:
       - name: Setup JDK
