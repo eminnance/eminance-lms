@@ -133,7 +133,6 @@ jobs:
           build-args: |
             PROFILE=prod
             APP_VERSION=${{ steps.extract_version.outputs.VERSION }}
-
           uses: 8398a7/action-slack@v3
           with:
             status: ${{ job.status }}
