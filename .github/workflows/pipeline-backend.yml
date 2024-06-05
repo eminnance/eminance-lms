@@ -68,6 +68,7 @@ jobs:
         run: |
           cd backend
           ./mvnw clean compile
+           echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
 
   build-image:
     name: Build Docker image
