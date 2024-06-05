@@ -6,9 +6,8 @@ services:
   # App backend service
   app-server:
     # Configuration for building the docker image for the backend service
-    build:
-      context: backend # Use an image built from the specified dockerfile in the `backend` directory.
-      dockerfile: Dockerfile
+    container_name: backend
+    image: eminnance/backend:latest # Use an image built from the specified dockerfile in the `backend` directory.
     ports:
       - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
     restart: always
@@ -24,9 +23,8 @@ services:
 
   # Frontend Service
   app-client:
-    build:
-      context: frontend # Use an image built from the specified dockerfile in the `frontend` directory.
-      dockerfile: Dockerfile
+    container_name: frontend
+    image: eminnance/frontend:latest
     ports:
       - "8081:80" # Map the exposed port 80 on the container to port 8081 on the host machine
     restart: always
