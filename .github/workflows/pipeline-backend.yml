@@ -74,6 +74,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
@@ -82,7 +86,8 @@ jobs:
       - name: Extract project version
         id: extract_version
         run: |
-          ls -la # list files to debug
+          cd book-network
+          echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
           
       - name: Login to DockerHub
         uses: docker/login-action@v3
